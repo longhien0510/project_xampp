@@ -1,13 +1,17 @@
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from './Component/Layout/Header';
+import Footer from './Component/Layout/Footer';
 import './App.css';
 
 function App({ children }) {
   return (
-    <div>
-      <Header />
+    <div className= "container">
+      <div className="row">
+        <Header />
+        {/* <MenuLeft/> */}
       {children}
       <Footer />
+      </div>
+      
     </div>
   );
 }

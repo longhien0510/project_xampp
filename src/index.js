@@ -4,22 +4,22 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from './Component/Layout/Header';
+import Footer from './Component/Layout/Footer';
 
-// import Blog_detail_section from './Page/Blog_detail_section';
+import blog_detail_section from './Component/Blog/blog_detail_section';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-// import Blog_list from './Page/Blog_list';
-import Blog_section_api from './Page/blog_section_api';
+ import Blog_list from './Component/Blog/Blog_list';
+import Blog_section from './Component/Blog/Blog_section';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <App>
       <Routes>
-        <Route path="/blog" element={<Blog_section_api />} />
-        <Route path="/blog/detail" element={<Blog_detail_section />} />
-        <Route path="/" element={<Blog_section_api />} />
+        <Route path="/blog" element={<Blog_list/>} />
+        <Route path="/blog/detail/:id" element={<blog_detail_section />} />
+        <Route path="/" element={<Blog_list/>} />
       </Routes>
       </App>
     </BrowserRouter>

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import MenuLeft from "../Layout/MenuLeft";
 
 function Blog_list(){
 const [data, setData]= useState([]);
@@ -46,7 +47,10 @@ const [data, setData]= useState([]);
                   {/* <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p> */}
                   <p>{value.description}</p>
                   {/* <a className="btn btn-primary" href>Read More</a> */}
-                   <Link className="btn btn-primary" to> Read More</Link>
+                   {/* <Link className="btn btn-primary" to> Read More</Link> */}
+                   {/* gan render cua blog-detail */}
+                   <Link  className="btn btn-primary" to={"/blog/detail/" + value.id}
+>                        Read More</Link>
                 </div>
                 );
             })
@@ -61,27 +65,7 @@ const [data, setData]= useState([]);
         <div className="row">
           
       
-          <div className="col-sm-3">
-            <div className="left-sidebar">
-              <h2>Category</h2>
-              <div className="panel-group category-products" id="accordian">
-                <div className="panel panel-default">
-                  <div className="panel-heading">
-                    <h4 className="panel-title">
-                      <a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
-                        <span className="badge pull-right"><i className="fa fa-plus" /></span>
-                        Sportswear
-                      </a>
-                    </h4>
-                  </div>
-                </div>
-              </div>
-              <div className="shipping text-center">
-                <img src="images/home/shipping.jpg" alt="" />
-              </div>
-            </div>
-          </div>
-
+          <MenuLeft/>
           
           <div className="col-sm-9">
             <div className="blog-post-area">

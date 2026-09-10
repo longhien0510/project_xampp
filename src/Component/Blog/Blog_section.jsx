@@ -116,6 +116,7 @@ function Blog_section(){
                     </div>
                   </div>
                 </div>{/*/category-products*/}
+                
                 <div className="brands_products">{/*brands_products*/}
                     {/* BRAND */}
                   <h2>Brands</h2>
@@ -145,10 +146,12 @@ function Blog_section(){
               </div>
             </div>
 
-            {/* LAN 1 */}
+           
             <div className="col-sm-9">
               <div className="blog-post-area">
                 <h2 className="title text-center">Latest From our Blog</h2>
+
+                 {/* LAN 1 */}
                 <div className="single-blog-post">
                   <h3>Girls Pink T Shirt arrived in store</h3>
                   <div className="post-meta">
