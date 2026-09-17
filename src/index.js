@@ -7,10 +7,13 @@ import reportWebVitals from './reportWebVitals';
 import Header from './Component/Layout/Header';
 import Footer from './Component/Layout/Footer';
 
-import blog_detail_section from './Component/Blog/blog_detail_section';
+import BlogDetailSection from './Component/Blog/BlogDetailSection';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
  import Blog_list from './Component/Blog/Blog_list';
 import Blog_section from './Component/Blog/Blog_section';
+import Register from './Component/Member/Register';
+import Login from './Component/Member/Login';
+import Index_chung from './Component/Member/Index';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -18,8 +21,14 @@ root.render(
       <App>
       <Routes>
         <Route path="/blog" element={<Blog_list/>} />
-        <Route path="/blog/detail/:id" element={<blog_detail_section />} />
         <Route path="/" element={<Blog_list/>} />
+        <Route path="/blog/detail/:id" element={<blog_detail_section />} />
+        {/* <Route path="/register" element= {<Register/>}/>
+        <Route path="/login" element= {<Login/>}/> */}
+        <Route path="/register-login" element= {<Index_chung/>}/>
+
+
+        
       </Routes>
       </App>
     </BrowserRouter>
