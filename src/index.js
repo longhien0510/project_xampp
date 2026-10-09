@@ -22,7 +22,7 @@ root.render(
       <Routes>
         <Route path="/blog" element={<Blog_list/>} />
         <Route path="/" element={<Blog_list/>} />
-        <Route path="/blog/detail/:id" element={<blog_detail_section />} />
+        <Route path="/blog/detail/:id" element={<BlogDetailSection />} />
         {/* <Route path="/register" element= {<Register/>}/>
         <Route path="/login" element= {<Login/>}/> */}
         <Route path="/register-login" element= {<Index_chung/>}/>

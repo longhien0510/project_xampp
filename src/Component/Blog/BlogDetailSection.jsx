@@ -6,11 +6,11 @@ import MenuLeft from '../Layout/MenuLeft';
 function BlogDetailSection(props) {
   let params = useParams();
 
-  // 1. Dùng Object rỗng cho dữ liệu bài viết
+
   const [data, setData] = useState({}); 
 
   useEffect(() => {
-    // 2. Sửa đường dẫn API nối đúng /detail/
+   
     axios.get("http://localhost/laravel8/public/api/blog/detail/" + params.id)
       .then(res => {
         setData(res.data.data || res.data);

@@ -86,8 +86,7 @@ function Register() {
         }
 
         setErrors({});
-        localStorage.setItem("email", input.email);
-        localStorage.setItem("password", input.password);
+        
 
         axios.post("http://localhost/laravel8/public/api/register", input)
             .then(res => {

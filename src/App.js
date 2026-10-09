@@ -7,7 +7,7 @@ function App({ children }) {
     <div className= "container">
       <div className="row">
         <Header />
-        {/* <MenuLeft/> */}
+      
       {children}
       <Footer />
       </div>

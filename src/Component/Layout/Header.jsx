@@ -1,6 +1,33 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 function Header(){
+  const navigate= useNavigate();
+
+  const IsloggedIn= localStorage.getItem("isLoggedIn")
+  function Logout(e)
+  {
+    e.preventDefault();
+    localStorage.clear(); // xóa hết dữ liệu trong local
+    navigate('/register-login') // chuyen lại trang đăng kí - đăng nhap ban dau
+
+  }
+  function RenderLogInMenu(){
+    if(IsloggedIn){
+      return(
+        <li>
+          <button type="button" onClick={Logout}>Log out <i className="fa fa-lock" /></button>
+        </li>
+      )
+    }
+    else{
+      return(
+        <li>
+        <Link to="/register-login"> <i className="fa fa-lock" /> Login</Link>
+      </li>
+      )
+      
+    }
+  }
     return (
     <header id="header">{/*header*/}
         <div className="header_top">{/*header_top*/}
@@ -65,7 +92,9 @@ function Header(){
                     <li><a href><i className="fa fa-star" /> Wishlist</a></li>
                     <li><a href="checkout.html"><i className="fa fa-crosshairs" /> Checkout</a></li>
                     <li><a href="cart.html"><i className="fa fa-shopping-cart" /> Cart</a></li>
-                    <li><a href="login.html"><i className="fa fa-lock" /> Login</a></li>
+                    {/* <li><Link to="/register-login"><i className="fa fa-lock" /> Login</Link></li> */}
+           
+                    {RenderLogInMenu()}
                   </ul>
                 </div>
               </div>
