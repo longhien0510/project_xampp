@@ -7,10 +7,9 @@ import reportWebVitals from './reportWebVitals';
 import Header from './Component/Layout/Header';
 import Footer from './Component/Layout/Footer';
 
-import BlogDetailSection from './Component/Blog/BlogDetailSection';
+import BlogDetailSection from './Component/Blog/Detail';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
- import Blog_list from './Component/Blog/Blog_list';
-import Blog_section from './Component/Blog/Blog_section';
+ import Blog_list from './Component/Blog/Index';
 import Register from './Component/Member/Register';
 import Login from './Component/Member/Login';
 import Index_chung from './Component/Member/Index';
