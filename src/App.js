@@ -5,15 +5,16 @@ import MenuLeft from './Component/Layout/MenuLeft';
 
 function App({ children }) {
   return (
-    <div className="container">
-      <div className="row">
-        <Header />
-      <MenuLeft/>
-      {children}
+    <>
+      <Header />
+      <main className="container">
+        <div className="row">
+          <MenuLeft />
+          {children}
+        </div>
+      </main>
       <Footer />
-      </div>
-      
-    </div>
+    </>
   );
 }
 

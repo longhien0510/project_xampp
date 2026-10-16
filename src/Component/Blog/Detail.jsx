@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
 import Comment from './Comment';
 import ListComment from './ListComment';
+import Rate from './Rate';
 function BlogDetailSection(props) {
   let params = useParams();
 
@@ -75,7 +76,7 @@ function BlogDetailSection(props) {
             </div>
 
             {/* Rating area */}
-            <div className="rating-area">
+            {/* <div className="rating-area">
               <ul className="ratings">
                 <li className="rate-this">Rate this item:</li>
                 <li>
@@ -86,6 +87,7 @@ function BlogDetailSection(props) {
                   <i className="fa fa-star" />
                 </li>
                 <li className="color">(6 votes)</li>
+                <Rate/>
               </ul>
               <ul className="tag">
                 <li>TAG:</li>
@@ -93,7 +95,8 @@ function BlogDetailSection(props) {
                 <li><a className="color" href="#">T-Shirt <span>/</span></a></li>
                 <li><a className="color" href="#">Girls</a></li>
               </ul>
-            </div>
+            </div> */}
+            <Rate idBlog={params.id} />
 
             {/* Social Share */}
             <div className="socials-share">
@@ -107,8 +110,6 @@ function BlogDetailSection(props) {
               commentList={commentList} 
               handleReply={handleReply}
           />
-
-        
             <div id="replay-box">
               <Comment 
                 idBlog={params.id} 
